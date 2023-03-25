@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BugTrackingSystemModelStoreContainer" CdmEntityContainer="BugTrackingSystemEntities">
+    <EntitySetMapping Name="BTS_Info">
+      <EntityTypeMapping TypeName="BugTrackingSystemModel.BTS_Info">
+        <MappingFragment StoreEntitySet="BTS_Info">
+          <ScalarProperty Name="BugID" ColumnName="BugID" />
+          <ScalarProperty Name="Tracker" ColumnName="Tracker" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Assignee" ColumnName="Assignee" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="PercentageDone" ColumnName="PercentageDone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

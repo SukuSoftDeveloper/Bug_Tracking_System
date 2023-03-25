@@ -1,0 +1,67 @@
+﻿@model  List<BugTrackingSystem.Models.Bug>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Issue Summary</h2>
+<hr />
+<div class="form-row">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6 text-right">
+        <a href="/Home/Create" class="btn btn-primary glyphicon glyphicon-plus"> CreateNewIssue</a>
+
+    </div>
+</div>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Bug ID</th>
+            <th>Tracker</th>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>StartDate</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Assignee</th>
+            <th>Estimated Time</th>
+            <th>Percentage Done</th>
+
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.BugID</td>
+                <td>@item.Tracker</td>
+                <td>@item.Subject</td>
+                <td>@item.Description</td>
+                <td>@item.Status</td>
+                <td>@item.StartDate</td>
+                <td>@item.Priority</td>
+                <td>@item.DueDate</td>
+                <td>@item.Assignee</td>
+                <td>@item.EstimatedTime</td>
+                <td>@item.PercentageDone</td>
+                <td>
+                    <a href="/Home/Detail/@item.BugID" class="btn btn-primary glyphicon glyphicon-pencil"> Details</a>
+                </td>
+                <td>
+                    <a href="/Home/Update/@item.BugID" class="btn btn-success glyphicon glyphicon-edit"> Edit</a>
+                </td>
+                <td>
+                    <a href="/Home/Delete/@item.BugID" class="btn btn-danger glyphicon glyphicon-trash"> Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    }
+
+</table>
+
